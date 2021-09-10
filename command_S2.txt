@@ -1,0 +1,12 @@
+set dim 256 256 256
+set actual-dim 256.0 256.0 256.0
+set subvoxel-dim 1 1 7
+set pd "./phantom/full_scale/pd.flt" factor=1.0 offset=0.0 order=zyx
+set t1 "./phantom/full_scale/t1.flt" factor=1.0 offset=0.0 order=zyx
+set t2 "./phantom/full_scale/t2.flt" factor=1.0 offset=0.0 order=zyx
+set sequence "./PSD_JSMRM2021/2DGRE_S2.seq.py"
+start
+var PREFIX "./result/${DATE}/${SEQUENCE_NAME}"
+save complex "${PREFIX}-complex.flt"
+quit
+
